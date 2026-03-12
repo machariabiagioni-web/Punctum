@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Glossario Gregoriano - Cardine</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a252f; color: #ecf0f1; margin: 0; padding: 20px; text-align: center; overflow-x: hidden; }
+        h1 { color: #3498db; margin-bottom: 10px; }
+        .istruzioni { background: #2c3e50; padding: 15px; border-radius: 8px; margin-bottom: 20px; display: inline-block; border: 1px solid #34495e; }
+        
+        .mappa-container { 
+            background: white; 
+            margin: auto; 
+            max-width: 90vw; /* Ridotto del 5% per evitare lo scroll fastidioso */
+            border: 5px solid #34495e;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            line-height: 0; 
+        }
+
+        img { 
+            width: 100%; 
+            height: auto; 
+            display: block;
+        }
+
+        area { cursor: help; }
+    </style>
+</head>
+<body>
+
+    <div class="istruzioni">
+        <h1>Paleografia Gregoriana</h1>
+        <p>Analisi semiotica dei neumi secondo la scuola di <strong>Eugène Cardine</strong>.<br>
+        Clicca sui segni per leggere il valore esegetico e le regole di esecuzione.</p>
+    </div>
+
+    <div class="mappa-container">
+        <img src="PNG_Notazioni principali.png" usemap="#image-map">
+
+        <map name="image-map">
+            <area alt="Chiave di FA" href="javascript:void(0)" onclick="mostra('Chiave di FA', this.title)" title="Si trova sulla terza o sulla seconda linea (raramente sulla quarta)." coords="228,13,579,312" shape="rect">
+            <area alt="Chiave di DO" href="javascript:void(0)" onclick="mostra('Chiave di DO', this.title)" title="Si trova sulla quarta o sulla terza linea (raramente sulla seconda)." coords="683,13,930,351" shape="rect">
+
+            <area alt="Punctum e Virga" href="javascript:void(0)" onclick="mostra('Punctum e Virga', this.title)" title="Per segnare una nota isolata su una sillaba gli scrittori sangallesi usano due segni: la virga e il tractulus. Solo lo scrittore di C adopera un terzo segno: il punctum." coords="1086,507,185" shape="circle">
+            <area alt="Edizione Vaticana" href="javascript:void(0)" onclick="mostra('Edizione Vaticana', this.title)" title="Nell'edizione vaticana il punctum si trova sia isolato che in composizione. La virga e il punctum inclinato si trovano sempre in composizione." coords="2440,533,200" shape="circle">
+            <area alt="Pes" href="javascript:void(0)" onclick="mostra('Pes', this.title)" title="Due note delle quali la seconda è la più acuta." coords="3051,481,3233,754" shape="rect">
+            <area alt="Clivis" href="javascript:void(0)" onclick="mostra('Clivis', this.title)" title="Due note delle quali la seconda è la più grave." coords="4144,429,4470,767" shape="rect">
+            <area alt="Bivirga" href="javascript:void(0)" onclick="mostra('Bivirga', this.title)" title="Bivirga: due note vicine, all'unisono." coords="5471,416,5810,715" shape="rect">
+            <area alt="Torculus" href="javascript:void(0)" onclick="mostra('Torculus', this.title)" title="La seconda nota è la più acuta." coords="7593,780,7254,546" shape="rect">
+            <area alt="Porrectus" href="javascript:void(0)" onclick="mostra('Porrectus', this.title)" title="Neuma di tre note delle quali la seconda è la più bassa." coords="8607,429,8972,793" shape="rect">
+            <area alt="Climacus (3 note)" href="javascript:void(0)" onclick="mostra('Climacus', this.title)" title="CLIMACUS-Virga subbipunctis." coords="10234,806,9818,403" shape="rect">
+            <area alt="Climacus (4 note)" href="javascript:void(0)" onclick="mostra('Climacus', this.title)" title="CLIMACUS-Virga subtripunctis." coords="13097,728,12485,286" shape="rect">
+
+            <area alt="Scandicus (Unite)" href="javascript:void(0)" onclick="mostra('Scandicus Unite', this.title)" title="SCANDICUS-a note unite: gruppo di tre o più note ascendenti." coords="787,1599,488,1274" shape="rect">
+            <area alt="Stanghetta Intera" href="javascript:void(0)" onclick="mostra('Pausa', this.title)" title="Indica una 'pausa del valore di una nota' e la fine di una frase musicale." coords="3598,1716,3220,1183" shape="rect">
+            <area alt="Scandicus (Stacco)" href="javascript:void(0)" onclick="mostra('Scandicus Stacco', this.title)" title="SCANDICUS-con stacco iniziale: la prima nota è staccata per indicare la maggiore importanza." coords="6369,1677,6044,1365" shape="rect">
+            <area alt="Scandicus (Virga)" href="javascript:void(0)" onclick="mostra('Scandicus Virga', this.title)" title="SCANDICUS-con virga terminale: la seconda nota è particolarmente importante." coords="11913,1651,11626,1274" shape="rect">
+
+            <area alt="Scandicus (3+ note)" href="javascript:void(0)" onclick="mostra('Scandicus Lungo', this.title)" title="SCANDICUS di più di tre note." coords="813,2743,527,2223" shape="rect">
+            <area alt="Doppia Stanghetta" href="javascript:void(0)" onclick="mostra('Fine brano', this.title)" title="Indica la fine di un brano o l'alternanza dei cori." coords="2752,2704,2453,2223" shape="rect">
+            <area alt="Trigon" href="javascript:void(0)" onclick="mostra('Trigon', this.title)" title="Prime due note in ripercussione. Situato solitamente sopra il semitono." coords="4821,2652,4417,2327" shape="rect">
+            <area alt="Salicus" href="javascript:void(0)" onclick="mostra('Salicus', this.title)" title="Gruppo ascendente con penultima nota ictata." coords="8790,2691,8412,2392" shape="rect">
+            <area alt="Salicus in composizione" href="javascript:void(0)" onclick="mostra('Salicus Composizione', this.title)" title="La nota caratteristica prepara all'appoggio della seguente." coords="10898,2691,10429,2249" shape="rect">
+
+            <area alt="Quilisma" href="javascript:void(0)" onclick="mostra('Quilisma', this.title)" title="Nota dentellata. Si allunga sempre la nota che lo precede." coords="826,3795,436,3444" shape="rect">
+            <area alt="Oriscus" href="javascript:void(0)" onclick="mostra('Oriscus', this.title)" title="Nota speciale all'unisono che termina un gruppo neumatico." coords="2166,3769,1659,3314" shape="rect">
+            <area alt="Oriscus (Vaticana)" href="javascript:void(0)" onclick="mostra('Oriscus Vaticana', this.title)" title="Nella vaticana è scritto come punctum o virga." coords="2817,3379,3272,3652" shape="rect">
+            <area alt="Virga unisono dopo Pes" href="javascript:void(0)" onclick="mostra('Virga dopo Pes', this.title)" title="Interpretazione: ripetere la nota." coords="4730,3782,4391,3470" shape="rect">
+            <area alt="Salicus unisono" href="javascript:void(0)" onclick="mostra('Salicus Unisono', this.title)" title="Ripercussione leggera della seconda nota." coords="5003,3405,5341,3678" shape="rect">
+            <area alt="Bistropha" href="javascript:void(0)" onclick="mostra('Bistropha', this.title)" title="Bistropha (o distropha): due note vicine, all'unisono, in composizione." coords="9362,3613,9714,3782" shape="rect">
+            <area alt="Tristropha" href="javascript:void(0)" onclick="mostra('Tristropha', this.title)" title="Tre note vicine, all'unisono, sia in composizione che non." coords="12355,3379,12836,3535" shape="rect">
+            <area alt="Bivirga (San Gallo)" href="javascript:void(0)" onclick="mostra('Bivirga S.Gallo', this.title)" title="Virga orizzontali: note cantate all'unisono." coords="13760,3288,14008,3470" shape="rect">
+
+            <area alt="Trivirga" href="javascript:void(0)" onclick="mostra('Trivirga', this.title)" title="TRIVIRGA - tre note vicine all'unisono." coords="956,4185,1438,4393" shape="rect">
+            <area alt="Torculus Tristropha" href="javascript:void(0)" onclick="mostra('Torculus Tristropha', this.title)" title="Torculus seguito da tre note all'unisono." coords="1855,4230,2212,4653" shape="rect">
+            <area alt="Clivis Distropha" href="javascript:void(0)" onclick="mostra('Clivis Distropha', this.title)" title="Clivis seguita da due note all'unisono." coords="2843,4237,3220,4666" shape="rect">
+            <area alt="Pressus (Forma)" href="javascript:void(0)" onclick="mostra('Pressus Forma', this.title)" title="Due note all'unisono e la terza più grave." coords="5563,4445,5979,4757" shape="rect">
+            <area alt="Pressus (Esecuzione)" href="javascript:void(0)" onclick="mostra('Pressus Esecuzione', this.title)" title="Suoni fusi in un solo suono pieno e vigoroso." coords="6539,4445,7020,4783" shape="rect">
+            <area alt="Pressus (Davanti a gruppo)" href="javascript:void(0)" onclick="mostra('Pressus Gruppo', this.title)" title="Nota all'unisono davanti a un gruppo discendente." coords="7553,4458,8074,4822" shape="rect">
+            <area alt="Pressus (Incontro)" href="javascript:void(0)" onclick="mostra('Pressus Incontro', this.title)" title="L'ultima nota di un gruppo e la prima del seguente all'unisono." coords="8503,4315,9063,4757" shape="rect">
+        </map>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+    <script>
+        window.onload = function() {
+            imageMapResize();
+        };
+
+        function mostra(titolo, testo) {
+            alert(titolo.toUpperCase() + "\n\n" + testo);
+        }
+    </script>
+
+</body>
+</html>
